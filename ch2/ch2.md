@@ -116,6 +116,126 @@ print(s) #h e l l o
 
 #### 2. 7 주요 문자열 함수
 ----
+책에서 소개된 함수는 다음과 같다.
+* input()
+* len()
+* max()
+* min()
+* reversed()
+* sorted()
+
+여기서 재밌는 것은 reversed는 이터레이터를 반환하고
+
+sorted는 리스트를 반환한다.
+
+여기서 잠시 iterator 객체에 대해 짚고 넘어가자면
+
+iterator 객체는 값을 차례대로 꺼낼 수 있는 객체를 말한다.
+
+그럼 iterable은? 
+
+단순히 반복 가능한 객체를 말한다.
+
+<br>
+
+#### 2.8 이진수와 10진수, 16진수 변환 함수
+---
+이전에 int와 다르게 문자열로 바꿔준다.
+
+``bin()``은 이진수로
+
+``hex()``은 16진수로
+
+``oct()``는 8진수로 변환해준다.
+
+<br>
+
+#### 2.9 간단한 불리언('is') 메서드
+---
+다른 언어에서 보던 대부분의 것을 지원한다.
+
+isalnum(), isalpha(), isdigit(), isidentifier(), islower(), isupper(), isspace(), istitle(), isprintabl()
+
+<br>
+
+#### 2.10 대소문자 변환 메서드
+---
+쉽다. 
+
+소문자? str.lower()
+
+대문자? str.upper()
+
+맨 앞에만 대분자? str.title()
+
+대소문자 서로 변경? str.swapcase()
+
+알다시피 파이썬은 파이썬 메서드나 함수로 구현되어 있는게
+
+직접 사용하는 것보다 훠어얼씬 빠르다.
+
+그렇기 때문에 알고리즘 테스트에서 사용한다면 아주 유용할 것이다.
+
+<br>
+
+#### 2.11 검색 - 교체 메서드
+---
+이건 좀 유용하게 사용된다.
+
+``str.startswith(부분문자열)`` 접두사 찾으면 True
+``str.endswith(부분문자열)`` 접미사 찾으면 True
+
+str.count(), str.find(), str.index(), str.rfind(),str.replace()가 있는데
+
+여기서 재밌는 것은 str.find()와 str.index()가 값을 찾지 못했을 때
+
+반환하는 것이 다르다.
+
+find는 찾는 문자가 없을 때, -1을 반환하고,
+
+index는 Value Error를 발생한다.
+
+
+<br>
+
+#### 2.12 'split'을 활용한 입력 값 쪼개기
+---
+str.split() 
+
+알고리즘 문제를 많이 푼다면 모를 수 없다.
+
+괄호 안에 자르고 싶은 기준 delimeter를 넣어주면 끝.
+
+리스트로 반환한다.
+
+<br>
+
+#### 2.13 앞뒤 문자 제거하기
+---
+str.strip() 앞뒤 문자 지우기
+str.lstrip() 앞 문자 지우기
+str.rstrip() 뒤 문자 지우기
+
+셋 모두 기본은 공백이다.
+
+<br>
+
+#### 2.14 자리 맞춤 메서드
+----
+얼마나 쓸일이 있을까 싶지만...
+
+``str.ljust(10, '#')``
+
+이렇게 사용하면 전체길이 10이 되도록 str을 왼쪽에 두고 오른쪽에 문자를 채워 넣는다.
+
+만약 s가 hello 라면
+```python
+s = 'hello'
+new_s = s.ljust(10, '#')
+print(new_s) # hello#####처럼 된다.
+```
+
+rjust도 있고, center도 있다.
 
 
 
